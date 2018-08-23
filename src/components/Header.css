@@ -1,0 +1,10 @@
+.HeaderGroup{
+    max-width: 900px;
+    margin: 0 auto; 
+    padding: 24px 0px 0px 0px;
+  }
+  
+  .Header{
+    background-color: #FF7744;
+    overflow: auto;
+  }

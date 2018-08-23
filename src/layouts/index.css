@@ -7,6 +7,8 @@ html {
 }
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased; 
+  line-height: 1.6;
 }
 article,
 aside,
@@ -40,11 +42,12 @@ template {
   display: none;
 }
 a {
-  font-size: 20px; 
+  font-size: 16px; 
   color: #FF7744;
   font-weight: bold;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none; 
 }
 a:active,
 a:hover {
@@ -214,17 +217,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
-img {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
+
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -620,5 +613,82 @@ pre tt:after {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
+  }
+}
+
+
+.Hero, .Header{
+  background-color: #FF7744;
+  overflow: auto;
+}
+.HeroLink{
+  font-family: 'Space Mono', monospace;
+  color: #fff;
+  line-height: 2.0;
+  font-weight: 400;
+  text-decoration: underline;
+  animation: HeroAnimation;
+  animation-duration: 2s;
+  animation-delay: 0.2s; 
+  opacity: 0;
+  animation-fill-mode: forwards; 
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.HeroGroup{
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(1, auto);
+  align-items: center;
+  justify-items: left;
+  margin: 40px auto; 
+  max-width: 900px;
+  min-height: 400px;
+}
+
+.HeroCommon {
+  font-weight: bold; 
+  color: rgba(255, 255, 255, 0.90);
+  animation: HeroAnimation;
+  animation-duration: 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.HeroHeader{
+  font-size: 64px;  
+}
+
+.HeroDescription{
+  font-size: 36px;
+  max-width: 700px; 
+}
+
+.WorksAt{
+  font-size: 24px;
+  opacity: 0.85;
+}
+
+/*Keyframe animations*/
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+/* Media Queries*/
+
+@media (max-width: 900px) {
+  .Hero, .Header{
+    padding: 16px;
   }
 }
