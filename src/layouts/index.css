@@ -670,6 +670,12 @@ pre tt:after {
   opacity: 0.85;
 }
 
+.Cards{
+  display: flex;
+  width: 1440px;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
 /*Keyframe animations*/
 
 @keyframes HeroAnimation {
@@ -690,5 +696,8 @@ pre tt:after {
 @media (max-width: 900px) {
   .Hero, .Header{
     padding: 16px;
+  }
+  .Cards {
+    width: 640px;
   }
 }

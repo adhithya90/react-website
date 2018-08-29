@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Card from '../components/card';
 
 const IndexPage = () => (
   <div>
@@ -15,17 +16,15 @@ const IndexPage = () => (
           <Link to="/page-2/" className="HeroLink">My writing</Link>
         </div>
     </div>
-    {/* <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="178"><path fill="#FF7744">
-      <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="10s" values ="
-      M 0 0 L 1036 0 C 1036 0 965 178 609 178 C 253 178 0 0 0 0 Z;
+    <div className="Cards">
+      <Card
+        title= "ODns Onboarding Experience"
+        image={require('../images/odnsonboarding.png')} />
 
-      M 0.152 0 L 1036.152 0 C 1036.152 0 694.152 173 338.152 173 C -17.848 173 0.152 0 0.152 0 Z;
-
-      M 0 0 L 1036 0 C 1036 0 965 178 609 178 C 253 178 0 0 0 0 Z      
-      " 
-    />
-    
-    </path></svg> */}
+      <Card
+        title= "ODns Onboarding Experience"
+        image={require('../images/odnsonboarding.png')} />  
+    </div>
   </div>
 )
 

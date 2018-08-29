@@ -1,0 +1,22 @@
+.Card{
+    border: 3px solid #22CCDD;
+    width: 480px;
+    text-align: center;
+    height: 296px;
+    padding: 32px;
+    /* padding: 32px 104px;  */
+}
+
+
+.CardGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CardTitle{
+    font-family: 'Space Mono', monospace;
+    color: #FF7744;
+    text-align: center;
+    font-size: 24px;
+}
